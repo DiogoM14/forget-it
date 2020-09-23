@@ -33,7 +33,13 @@ const Login: React.FC = () => {
   return (
     <Wrapper>
       <WelcomeContainer>
-        <Swipe dotColor="#000" activeDotColor="#d03715">
+        <Swipe
+          dotColor="#000"
+          activeDotColor="#d03715"
+          loop={false}
+          autoplay={true}
+          autoplayTimeout={15}
+        >
           <FirstText>
             <Title>Welcome to Forget It</Title>
             <WelcomeDescription>
@@ -70,7 +76,7 @@ const Login: React.FC = () => {
       <SignUpContainer>
         <SignUpText>Don't have account? </SignUpText>
         <SignUpButton onPress={handleNavigateToHomePage}>
-          <SignUpText style={{ color: '#d03715' }}>SignUp!</SignUpText>
+          <SignUpText style={{ color: '#d03715' }}>Sign Up!</SignUpText>
         </SignUpButton>
       </SignUpContainer>
     </Wrapper>

@@ -1,7 +1,12 @@
 {
-  "name": "forget-it",
-  "displayName": "forget-it",
+  "name": "Forget It",
+  "displayName": "Forget It",
   "expo": {
+    "splash": {
+    "image": "./src/assets/splash.png",
+    "backgroundColor": "#000",
+    "resizeMode": "cover"
+    },
     "name": "forget-it",
     "slug": "forget-it",
     "version": "1.0.0",

@@ -21,20 +21,35 @@ export const Title = styled.Text`
 `
 
 export const ListContainer = styled.ScrollView`
-  background: red;
+  background: #121212;
   margin-top: 100px;
+
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 `
 
-export const List = styled.FlatList``
+export const List = styled.FlatList`
+  color: #fff;
+  font-size: 40px;
+`
 
 export const FooterContainer = styled.View`
   width: 100%;
   height: 100px;
-  background: blue;
+
+  background: #121212;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `
 
-export const Menu = styled(RectButton)``
+export const Menu = styled(RectButton)`
+  margin-left: 40px;
+`
 
-export const AppNote = styled.View``
+export const AppNote = styled(RectButton)`
+  margin-right: 40px;
+`

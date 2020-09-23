@@ -11,21 +11,29 @@ import {
   Menu,
   AppNote
 } from './styles'
+import { Text } from 'react-native'
 
 const Home: React.FC = () => {
-  // const [notes, setNotes] = useState([{name}, {}])
+  const [notes, setNotes] = useState([
+    { name: 'Personal', number: '1' },
+    { name: 'Work', number: '2' }
+  ])
 
   return (
     <Wrapper>
       <Container>
         <Title>My Notes</Title>
         <ListContainer>
-          <List></List>
+          <List />
         </ListContainer>
 
         <FooterContainer>
-          <Feather name="menu" size={50} color="#fff" />
-          <Feather name="plus" size={50} color="#fff" />
+          <Menu>
+            <Feather name="menu" size={50} color="#fff" />
+          </Menu>
+          <AppNote>
+            <Feather name="plus" size={50} color="#fff" />
+          </AppNote>
         </FooterContainer>
       </Container>
     </Wrapper>

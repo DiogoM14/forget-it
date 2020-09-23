@@ -2,6 +2,7 @@ import styled from 'styled-components/native'
 
 import 'react-native-gesture-handler'
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler'
+import Swiper from 'react-native-swiper'
 
 export const Wrapper = styled.View`
   flex: 1;
@@ -19,10 +20,23 @@ export const WelcomeContainer = styled.View`
   justify-content: flex-end;
 `
 
+export const Swipe = styled(Swiper)`
+  align-self: center;
+  justify-content: flex-end;
+`
+
+export const FirstText = styled.View``
+
+export const SecondText = styled.View``
+
+export const ThirdText = styled.View``
+
 export const Title = styled.Text`
   color: #fff;
   font-size: 32px;
   font-family: roboto_700;
+  text-align: center;
+  margin-top: 35%;
 `
 
 export const WelcomeDescription = styled.Text`
@@ -30,18 +44,7 @@ export const WelcomeDescription = styled.Text`
   margin-vertical: 24px;
   font-size: 20px;
   font-family: roboto_400;
-`
-
-export const DotContainer = styled.View`
-  flex-direction: row;
-`
-
-export const WelcomeDot = styled.View`
-  width: 8px;
-  height: 8px;
-  margin: 40px 5px;
-  border-radius: 8px;
-  background: #d03715;
+  text-align: center;
 `
 
 export const ButtonsContainer = styled.View`

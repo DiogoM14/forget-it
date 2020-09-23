@@ -4,10 +4,12 @@ import { useNavigation } from '@react-navigation/native'
 import {
   Wrapper,
   WelcomeContainer,
+  Swipe,
   Title,
+  FirstText,
+  SecondText,
+  ThirdText,
   WelcomeDescription,
-  DotContainer,
-  WelcomeDot,
   ButtonsContainer,
   GoogleButton,
   GoogleImage,
@@ -31,15 +33,29 @@ const Login: React.FC = () => {
   return (
     <Wrapper>
       <WelcomeContainer>
-        <Title>Welcome to Forget It</Title>
-        <WelcomeDescription>
-          Create your notes and forget your preoccupations
-        </WelcomeDescription>
-        <DotContainer>
-          <WelcomeDot />
-          <WelcomeDot />
-          <WelcomeDot />
-        </DotContainer>
+        <Swipe dotColor="#000" activeDotColor="#d03715">
+          <FirstText>
+            <Title>Welcome to Forget It</Title>
+            <WelcomeDescription>
+              Create your notes and forget your preoccupations
+            </WelcomeDescription>
+          </FirstText>
+
+          <SecondText>
+            <Title>Discover Productivity</Title>
+            <WelcomeDescription>
+              You can create customizable notes. Here you are the boss
+            </WelcomeDescription>
+          </SecondText>
+
+          <ThirdText>
+            <Title>Thank you for being here</Title>
+            <WelcomeDescription>
+              You can count on us to improve your experience of upgrading on
+              Forget It
+            </WelcomeDescription>
+          </ThirdText>
+        </Swipe>
       </WelcomeContainer>
       <ButtonsContainer>
         <GoogleButton onPress={handleNavigateToHomePage}>

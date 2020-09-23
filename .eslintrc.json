@@ -42,6 +42,7 @@
     "import/no-duplicates": "off",
     "@typescript-eslint/camelcase": "off",
     "no-use-before-define": "off",
+    "react/no-unescaped-entities": "off",
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {

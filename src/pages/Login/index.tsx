@@ -30,6 +30,10 @@ const Login: React.FC = () => {
   function handleNavigateToHomePage() {
     navigate('Home')
   }
+
+  function handleNavigateToSignUp() {
+    navigate('SignUp')
+  }
   return (
     <Wrapper>
       <WelcomeContainer>
@@ -55,7 +59,7 @@ const Login: React.FC = () => {
           </SecondText>
 
           <ThirdText>
-            <Title>Thank you for being here</Title>
+            <Title>Thank you</Title>
             <WelcomeDescription>
               You can count on us to improve your experience of upgrading on
               Forget It
@@ -75,7 +79,7 @@ const Login: React.FC = () => {
       </ButtonsContainer>
       <SignUpContainer>
         <SignUpText>Don't have account? </SignUpText>
-        <SignUpButton onPress={handleNavigateToHomePage}>
+        <SignUpButton onPress={handleNavigateToSignUp}>
           <SignUpText style={{ color: '#d03715' }}>Sign Up!</SignUpText>
         </SignUpButton>
       </SignUpContainer>

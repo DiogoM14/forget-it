@@ -1,0 +1,12 @@
+{
+  "name": "forget-it",
+  "displayName": "forget-it",
+  "expo": {
+    "name": "forget-it",
+    "slug": "forget-it",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

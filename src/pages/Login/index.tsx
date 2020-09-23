@@ -1,31 +1,49 @@
 import React from 'react'
-import { Text } from 'react-native'
 
 import {
   Wrapper,
-  Container,
-  LoginContainer,
+  WelcomeContainer,
   Title,
-  Form,
-  Email,
-  Password,
-  LoginButton,
-  RegisterButton
+  WelcomeDescription,
+  DotContainer,
+  WelcomeDot,
+  ButtonsContainer,
+  GoogleButton,
+  GoogleImage,
+  FacebookButton,
+  FacebookImage,
+  ButtonText,
+  SignUp
 } from './styles'
+
+import GoogleIcon from '../../assets/icons/google.png'
+import FacebookIcon from '../../assets/icons/facebook.png'
 
 const Login: React.FC = () => {
   return (
     <Wrapper>
-      <Container>
-        <Title>Forget It</Title>
-        <Form>
-          <Email placeholder="E-mail" />
-          <Password placeholder="Password" />
-
-          <LoginButton />
-          <RegisterButton />
-        </Form>
-      </Container>
+      <WelcomeContainer>
+        <Title>Welcome to Forget It</Title>
+        <WelcomeDescription>
+          Create your notes and forget your preoccupations
+        </WelcomeDescription>
+        <DotContainer>
+          <WelcomeDot />
+          <WelcomeDot />
+          <WelcomeDot />
+        </DotContainer>
+      </WelcomeContainer>
+      <ButtonsContainer>
+        <GoogleButton>
+          <GoogleImage source={GoogleIcon} />
+          <ButtonText>Login with Google</ButtonText>
+        </GoogleButton>
+        <FacebookButton>
+          <FacebookImage source={FacebookIcon} />
+          <ButtonText>Login with Facebook</ButtonText>
+        </FacebookButton>
+      </ButtonsContainer>
+      <SignUp>Don't have account? Sign Up!</SignUp>
     </Wrapper>
   )
 }

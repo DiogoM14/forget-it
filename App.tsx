@@ -24,7 +24,7 @@ export default function App() {
   return (
     <>
       <LoginPage />
-      <StatusBar style="auto" />
+      <StatusBar style="light" backgroundColor="#000" />
     </>
   )
 }

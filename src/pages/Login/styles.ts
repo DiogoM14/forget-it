@@ -1,5 +1,8 @@
 import styled from 'styled-components/native'
 
+import 'react-native-gesture-handler'
+import { BorderlessButton, RectButton } from 'react-native-gesture-handler'
+
 export const Wrapper = styled.View`
   flex: 1;
   background: #000;
@@ -47,7 +50,7 @@ export const ButtonsContainer = styled.View`
   margin-top: 70px;
 `
 
-export const GoogleButton = styled.TouchableOpacity`
+export const GoogleButton = styled(RectButton)`
   width: 100%;
   height: 70px;
   border-radius: 20px;
@@ -66,7 +69,7 @@ export const GoogleImage = styled.Image`
   margin-right: 16px;
 `
 
-export const FacebookButton = styled.TouchableOpacity`
+export const FacebookButton = styled(RectButton)`
   width: 100%;
   height: 70px;
   border-radius: 20px;
@@ -92,9 +95,15 @@ export const ButtonText = styled.Text`
   font-family: roboto_500;
 `
 
-export const SignUp = styled.Text`
+export const SignUpContainer = styled.View`
+  flex-direction: row;
+`
+
+export const SignUpText = styled.Text`
   color: #fff;
   font-family: roboto_500;
   margin-bottom: 50px;
   font-size: 16px;
 `
+
+export const SignUpButton = styled(BorderlessButton)``

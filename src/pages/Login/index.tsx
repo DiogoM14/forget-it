@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 import {
   Wrapper,
@@ -13,13 +14,20 @@ import {
   FacebookButton,
   FacebookImage,
   ButtonText,
-  SignUp
+  SignUpContainer,
+  SignUpText,
+  SignUpButton
 } from './styles'
 
 import GoogleIcon from '../../assets/icons/google.png'
 import FacebookIcon from '../../assets/icons/facebook.png'
 
 const Login: React.FC = () => {
+  const { navigate } = useNavigation()
+
+  function handleNavigateToHomePage() {
+    navigate('Home')
+  }
   return (
     <Wrapper>
       <WelcomeContainer>
@@ -34,16 +42,21 @@ const Login: React.FC = () => {
         </DotContainer>
       </WelcomeContainer>
       <ButtonsContainer>
-        <GoogleButton>
+        <GoogleButton onPress={handleNavigateToHomePage}>
           <GoogleImage source={GoogleIcon} />
           <ButtonText>Login with Google</ButtonText>
         </GoogleButton>
-        <FacebookButton>
+        <FacebookButton onPress={handleNavigateToHomePage}>
           <FacebookImage source={FacebookIcon} />
           <ButtonText>Login with Facebook</ButtonText>
         </FacebookButton>
       </ButtonsContainer>
-      <SignUp>Don't have account? Sign Up!</SignUp>
+      <SignUpContainer>
+        <SignUpText>Don't have account? </SignUpText>
+        <SignUpButton onPress={handleNavigateToHomePage}>
+          <SignUpText style={{ color: '#d03715' }}>SignUp!</SignUpText>
+        </SignUpButton>
+      </SignUpContainer>
     </Wrapper>
   )
 }

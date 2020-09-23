@@ -9,9 +9,9 @@ import {
   useFonts
 } from '@expo-google-fonts/roboto'
 
-import LoginPage from './src/pages/Login'
+import AppStack from './src/routes/AppStack'
 
-export default function App() {
+const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
     roboto_400: Roboto_400Regular,
     roboto_500: Roboto_500Medium,
@@ -23,8 +23,10 @@ export default function App() {
   }
   return (
     <>
-      <LoginPage />
+      <AppStack />
       <StatusBar style="light" backgroundColor="#000" />
     </>
   )
 }
+
+export default App

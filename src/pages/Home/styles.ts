@@ -28,9 +28,19 @@ export const ListContainer = styled.ScrollView`
   border-top-right-radius: 20px;
 `
 
-export const List = styled.FlatList`
+export const List = styled(RectButton)`
+  width: 100%;
+  flex-direction: row;
+
+  align-content: center;
+  justify-content: space-between;
+`
+
+export const ListItem = styled.Text`
   color: #fff;
-  font-size: 40px;
+  font-size: 28px;
+  font-family: roboto_500;
+  margin: 20px;
 `
 
 export const FooterContainer = styled.View`
